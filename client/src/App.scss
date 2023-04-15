@@ -1,0 +1,134 @@
+@mixin containers($container-width: 100vw){
+  width: $container-width;
+}
+
+@mixin navs($nav-width: 100%, $nav-flex: flex, $nav-justify: space-evenly, $nav-align: center, $nav-background: gold, $nav-padding: 15px, $nav-text: 20px){
+  width: $nav-width;
+  display: $nav-flex;
+  justify-content: $nav-justify;
+  align-items: $nav-align;
+  background-color: $nav-background;
+  padding: $nav-padding;
+  font-size: $nav-text;
+}
+
+@mixin cards($card-padding: 10px, $card-background: goldenrod, $card-color: black, $card-width: 25%, $card-margin: 10px auto, $card-radius: 5px){
+  padding: $card-padding;
+  background-color: $card-background;
+  color: $card-color;
+  width: $card-width;
+  margin: $card-margin;
+  border-radius: $card-radius;
+}
+
+@mixin forms($primary-color: dodgerblue, $primary-padding: 25px, $primary-radius: 5px, $primary-width: 60vw, $primary-margin: 20px auto){
+background-color: $primary-color;
+padding: $primary-padding;
+border-radius: $primary-radius;
+width: $primary-width;
+margin: $primary-margin;
+}
+
+@mixin labels($label-align: left, $label-color: whitesmoke, $label-display: block, $label-text: 1.2em){
+  text-align: $label-align;
+  color: $label-color;
+  display: $label-display;
+  font-size: $label-text;
+}
+
+@mixin inputs($input-width: 95%, $input-padding: 10px, $input-radius: 5px){
+  width: $input-width;
+  padding: $input-padding;
+  border-radius: $input-radius;
+}
+
+@mixin submits($button-padding: 10px, $button-radius: 5px, $button-color: gold, $button-margin: 15px 0px 5px 0px, $button-width: 50%, $button-background: black){
+  padding: $button-padding;
+  border-radius: $button-radius;
+  color: $button-color;
+  margin: $button-margin;
+  width: $button-width;
+  background-color: $button-background;
+}
+
+@mixin hovers($hover-color: goldenrod, $hover-text: black){
+  background-color: $hover-color;
+  color: $hover-text;
+}
+
+@mixin focuses($active-color: goldenrod){
+  border-color: $active-color
+}
+
+#root {
+  width: 100vw;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.App{
+  @include containers;
+}
+
+nav{
+  @include navs
+}
+
+form{
+  @include forms
+}
+
+label{
+  @include labels
+}
+
+input[type=text]{
+  @include inputs
+}
+
+input[type=text]:focus{
+  @include focuses
+}
+
+input[type=submit]{
+  @include submits
+}
+
+button{
+  cursor: pointer;
+}
+
+button:hover{
+  opacity: 0.8;
+}
+
+input[type=submit]:hover{
+  @include hovers
+}
+
+.button-delete{
+  @include submits(10px, 5px, red, 5px, fit-content, black)
+}
+
+.button-edit{
+  @include submits(10px, 5px, dodgerblue, 5px, fit-content, black)
+}
+
+.button-like{
+  @include submits(10px, 5px, green, 5px, fit-content, black)
+}
+
+.user-card{
+  @include cards
+}
+
+h2{
+  margin-top: 30px;
+}
+
+#clock{
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 50%;
+  text-align: center;
+}

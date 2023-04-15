@@ -1,42 +1,116 @@
 #root {
-  max-width: 1280px;
+  width: 100vw;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.App {
+  width: 100vw;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: gold;
+  padding: 15px;
+  font-size: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+form {
+  background-color: dodgerblue;
+  padding: 25px;
+  border-radius: 5px;
+  width: 60vw;
+  margin: 20px auto;
 }
 
-.card {
-  padding: 2em;
+label {
+  text-align: left;
+  color: whitesmoke;
+  display: block;
+  font-size: 1.2em;
 }
 
-.read-the-docs {
-  color: #888;
+input[type=text] {
+  width: 95%;
+  padding: 10px;
+  border-radius: 5px;
 }
+
+input[type=text]:focus {
+  border-color: goldenrod;
+}
+
+input[type=submit] {
+  padding: 10px;
+  border-radius: 5px;
+  color: gold;
+  margin: 15px 0px 5px 0px;
+  width: 50%;
+  background-color: black;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+input[type=submit]:hover {
+  background-color: goldenrod;
+  color: black;
+}
+
+.button-delete {
+  padding: 10px;
+  border-radius: 5px;
+  color: red;
+  margin: 5px;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: black;
+}
+
+.button-edit {
+  padding: 10px;
+  border-radius: 5px;
+  color: dodgerblue;
+  margin: 5px;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: black;
+}
+
+.button-like {
+  padding: 10px;
+  border-radius: 5px;
+  color: green;
+  margin: 5px;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: black;
+}
+
+.user-card {
+  padding: 10px;
+  background-color: goldenrod;
+  color: black;
+  width: 25%;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+
+h2 {
+  margin-top: 30px;
+}
+
+#clock {
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 50%;
+  text-align: center;
+}/*# sourceMappingURL=App.css.map */
